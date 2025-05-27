@@ -35,15 +35,13 @@
   font-family: Poppins, Arial, sans-serif;
   font-size: 20px;
   line-height: 120%;
-  height: 24px;
   color: #212121;
-  display: flex;
-  align-items: center;
-  justify-content: start;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 352px;
   margin: 0;
+  font-weight: 500;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 627px) {
