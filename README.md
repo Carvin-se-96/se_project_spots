@@ -14,3 +14,5 @@ This is an image sharing site that functions to be adaptive with mobile viewing.
 
 ## Deployment
 https://carvin-se-96.github.io/se_project_spots
+## Video
+https://youtu.be/_NDr6XSwVcE
