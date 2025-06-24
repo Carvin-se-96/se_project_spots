@@ -117,7 +117,22 @@
   .modal__form {
     width: 100%;
   }
+  .modal__container {
+    padding: 22px 12px 12px;
+  }
+  .modal__close-btn {
+    top: 22px;
+    right: 12px;
+  }
 
+  .modal__input {
+    font-size: 16px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+  }
+  
   .modal__submit-btn {
     max-width: none;
   }
