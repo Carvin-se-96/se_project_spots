@@ -23,8 +23,7 @@
             class="profile__avatar"
           />
           <div class="profile__column">
-            <h1 class="profile__name">Bessie Coleman
-            </h1>
+            <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
               <img src="./images/pencil.svg" alt="Pencil icon" />Edit Profile
@@ -36,72 +35,16 @@
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Val Thorens"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Val Thorens</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="Restaurant terrace"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Restaurant terrace</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="An outdoor cafe"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">An outdoor cafe</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="A very long bridge, over the forest..."
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">A very long bridge, over the forest</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="Tunnel with morning light"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Tunnel with morning light</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Mountain house"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Mountain house</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
+            <template id="card-template">
+              <li class="card">
+                <button class="card__delete-button" type="button"></button>
+                <img src="#" alt="" class="card__image" />
+                <div class="card__content">
+                  <h2 class="card__title"></h2>
+                  <button type="button" class="card__like-btn"></button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -111,10 +54,7 @@
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
-            <img
-              src="./images/CloseIconBlack.svg"
-              alt="Close Icon"
-              />
+            <img src="./images/CloseIconBlack.svg" alt="Close Icon" />
           </button>
           <h2 class="modal__title">Edit profile</h2>
           <form class="modal__form">
@@ -125,7 +65,8 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
-              required>
+                required
+              />
             </label>
             <label for="profile-description-input" class="modal__label"
               >Description
@@ -140,13 +81,10 @@
           </form>
         </div>
       </div>
-       <div class="modal" id="new-post-modal">
+      <div class="modal" id="new-post-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
-            <img
-              src="./images/CloseIconBlack.svg"
-              alt="Close Icon"
-              />
+            <img src="./images/CloseIconBlack.svg" alt="Close Icon" />
           </button>
           <h2 class="modal__title">New post</h2>
           <form class="modal__form">
@@ -172,7 +110,25 @@
           </form>
         </div>
       </div>
-    </div>
+
+       <div class="modal modal__is-opened" id="preview-modal">
+        <div class="modal__image-container">
+          <button type="button" class="modal__close-btn modal__close-btn_preview">
+            <img src="./images/CloseIconBlack.svg" alt="Close Icon" />
+          </button>
+          <img src="https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
+            alt=""
+            class="modal__image"/>
+          <p class="modal__caption">Golden Gate Bridge</p>
+
+        </div>
+      </div>
+
+
+
+
+
+
     <script src="./scripts/index.js"></script>
   </body>
 </html>
