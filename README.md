@@ -1,19 +1,21 @@
 # Project 3: Spots
 
-### Overview
+An image sharing site
 
-- Intro
-- Figma
-- Images
+## Description
 
-**Intro**
+This is an image sharing site that functions to be adaptive with mobile viewing. Images can be shared via clicking or tapping on the 'New Post' button. Each new image being shared will be organized in a column along with the other images. The site also features an 'Edit Profile' button to allow any changes the user might wish to add.
 
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
+## Tech Stack
 
-\*_Figma_
+-HTML
+-CSS
+-Responsive Design
 
-- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+## Deployment
 
-**Images**
+https://carvin-se-96.github.io/se_project_spots
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
+## Video
+
+https://youtu.be/_NDr6XSwVcE
