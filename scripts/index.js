@@ -59,7 +59,7 @@ const linkInput = newPostModal.querySelector("#card-image-input");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
-const prevewImageEl = previewModal.querySelector(".modal__image");
+const previewImageEl = previewModal.querySelector(".modal__image");
 const previewImageCaption = previewModal.querySelector(".modal__caption");
 
 const cardTemplate = document
@@ -88,7 +88,7 @@ function getCardElement(data) {
   });
 
   cardImageEl.addEventListener("click", () => {
-    prevewImageEl.src = data.link;
+    previewImageEl.src = data.link;
     previewImageCaption.textContent = data.name;
     openModal(previewModal);
   });
@@ -131,10 +131,7 @@ function handleAddCardSubmit(evt) {
   evt.preventDefault();
   closeModal(newPostModal);
 }
-const inputValue = {
-  name: nameInput.value,
-  link: linkInput.value,
-};
+
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 
