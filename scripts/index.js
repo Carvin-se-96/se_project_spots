@@ -1,10 +1,8 @@
 const initialCards = [
-
   {
     name: "Golden Gate Bridge",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
-
 
   {
     name: "Val Thorens",
@@ -61,7 +59,8 @@ const linkInput = newPostModal.querySelector("#card-image-input");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
-
+const prevewImageEl = previewModal.querySelector(".modal__image");
+const previewImageCaption = previewModal.querySelector(".modal__caption");
 
 const cardTemplate = document
   .querySelector("#card-template")
@@ -86,6 +85,12 @@ function getCardElement(data) {
   cardDeleteBtnEl.addEventListener("click", () => {
     cardElement.remove();
     cardElement = null;
+  });
+
+  cardImageEl.addEventListener("click", () => {
+    prevewImageEl.src = data.link;
+    previewImageCaption.textContent = data.name;
+    openModal(previewModal);
   });
 
   return cardElement;
@@ -124,10 +129,12 @@ newPostBtn.addEventListener("click", function () {
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-  //todo replace with the values of name and link 
-  console.log(linkInput.value, nameInput.value);
   closeModal(newPostModal);
 }
+const inputValue = {
+  name: nameInput.value,
+  link: linkInput.value,
+};
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 
