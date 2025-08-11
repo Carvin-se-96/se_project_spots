@@ -15,10 +15,9 @@
 }
 
 .modal_opened {
-  visibility: hidden;
+  visibility: visible;
   opacity: 1;
 }
-
 
 .modal__container {
   max-width: 730px;

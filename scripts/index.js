@@ -129,6 +129,12 @@ newPostBtn.addEventListener("click", function () {
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
+  console.log(nameInput.value, linkInput.value);
+  const cardElement = getCardElement({
+    name: nameInput.value,
+    link: linkInput.value,
+  });
+  cardsList.prepend(cardElement);
   closeModal(newPostModal);
 }
 
