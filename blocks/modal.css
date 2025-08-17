@@ -133,6 +133,10 @@
 
 .modal__caption {
   color: white;
+  background-color: #212121;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
 }
 
 @media screen and (max-width: 627px) {
