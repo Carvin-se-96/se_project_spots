@@ -59,6 +59,7 @@ const linkInput = newPostModal.querySelector("#card-image-input");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
+const cardSubmitBtn = previewModal.querySelector(".modal__button");
 const previewImageEl = previewModal.querySelector(".modal__image");
 const previewImageCaption = previewModal.querySelector(".modal__caption");
 
@@ -133,6 +134,8 @@ function handleAddCardSubmit(evt) {
     name: nameInput.value,
     link: linkInput.value,
   });
+  evt.target.reset();
+  disableButton(cardSubmitBt, settings);
   cardsList.prepend(cardElement);
   closeModal(newPostModal);
 }
