@@ -10,13 +10,13 @@ const settings = {
 const showInputError = (formElement, inputElement, errorMsg) => {
   const errorMsgEl = formElement.querySelector(`#${inputElement.id}-error`);
   errorMsgEl.textContent = errorMsg;
-  inputElement.classList.add("modal__input_type_error");
+  inputElement.classList.add(config.inputErrorClass);
 };
 
 const hideInputError = (formElement, inputElement) => {
   const errorMsgEl = formElement.querySelector(`#${inputElement.id}-error`);
   errorMsgEl.textContent = "";
-  inputElement.classList.remove("modal__input_type_error");
+  inputElement.classList.remove(config.hideInputError);
 };
 
 const checkInputValidity = (formElement, inputElement) => {
@@ -41,8 +41,9 @@ const toggleButtonState = (inputList, buttonElement) => {
   }
 };
 
-const disableButton = (buttonElement) => {
+const disableButton = (buttonElement, config) => {
   buttonElement.disabled = true;
+  buttonElement.classList.add(config.inactiveButtonClass);
 };
 
 const setEventListeners = (formElement, config) => {
