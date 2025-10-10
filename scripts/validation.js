@@ -16,7 +16,7 @@ const showInputError = (formElement, inputElement, errorMsg) => {
 const hideInputError = (formElement, inputElement, config) => {
   const errorMsgEl = formElement.querySelector(`#${inputElement.id}-error`);
   errorMsgEl.textContent = "";
-  inputElement.classList.remove(config.hideInputError);
+  inputElement.classList.remove(config.inputErrorClass);
 };
 
 const checkInputValidity = (formElement, inputElement, config) => {

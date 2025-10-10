@@ -104,7 +104,10 @@ function openModal(modal) {
 
 function handleEscapeKey(evt) {
   if (evt.key === "Escape") {
-    closeModal(modal__form);
+    const openedModal = document.querySelector(".modal_opened");
+    if (openedModal) {
+        closeModal(openedModal);
+    }
   }
 }
 
