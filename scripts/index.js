@@ -106,7 +106,7 @@ function handleEscapeKey(evt) {
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_opened");
     if (openedModal) {
-        closeModal(openedModal);
+      closeModal(openedModal);
     }
   }
 }
@@ -145,10 +145,10 @@ function handleAddCardSubmit(evt) {
     name: nameInput.value,
     link: linkInput.value,
   });
-console.log(cardSubmitBtn);
+
   disableButton(cardSubmitBtn, settings);
   cardsList.prepend(cardElement);
-   evt.target.reset();
+  evt.target.reset();
   closeModal(newPostModal);
 }
 
@@ -165,4 +165,16 @@ previewModalCloseBtn.addEventListener("click", function () {
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
+});
+
+const modals = document.querySelectorAll(".modal");
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (
+      evt.target === modal ||
+      evt.target.classList.contains(".modal__close-btn")
+    ) {
+      closeModal(modal);
+    }
+  });
 });
